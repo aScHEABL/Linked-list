@@ -42,17 +42,29 @@ class LinkedList {
 
     // 4. Prints the first node in the list.
     head() {
-        console.log(this.Head);
+        let current = this.Head
+        console.log(current.data);
     }
 
     // 5. Prints the last node in the list.
     tail() {
         let current = this.Head;
         while (current) {
-            if (!current.next) console.log(current);
+            if (!current.next) console.log(current.data);
             current = current.next;
         }
     }
+
+    // 6. Prints the node at the given index.
+    at(index) {
+        let current = this.Head;
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+        }
+        console.log(current.data);
+    }
+    // 7. Remove the last element from the list.
+
     // Print every node in the list.
     printListData() {
         let current = this.Head;
@@ -71,4 +83,5 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-ll.head();
+ll.pop()
+ll.printListData();
