@@ -64,6 +64,16 @@ class LinkedList {
         console.log(current.data);
     }
     // 7. Remove the last element from the list.
+    pop() {
+        let current = this.Head;
+        let previous;
+        while (current.next) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = null;
+        this.size--;
+    }
 
     // Print every node in the list.
     printListData() {
@@ -83,5 +93,5 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-ll.pop()
+ll.pop();
 ll.printListData();
