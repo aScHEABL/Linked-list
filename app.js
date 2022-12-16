@@ -121,18 +121,7 @@ class LinkedList {
 
     // 11. Inserts a new node with the provided value at the given index.
     insertAt(data, index) {
-        let count = 0;
-        let node = new Node(data);
-        let current = this.Head;
-        if (index < 0 || index > this.size - 1) {
-            console.log("Provided index is out of range.");
-            return;
-        } else if (index === 0) {
-            current = new Node(data, current);
-            return;
-        } else if (index > 0 && index < this.size - 1) {
-            
-        }
+        
     }
 
     // 12. Removes the node at the given index.
