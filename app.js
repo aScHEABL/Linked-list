@@ -100,6 +100,9 @@ class LinkedList {
                 console.log(index);
                 return;
             }
+            if (!current.next) {
+                console.log("Null")
+            }
             current = current.next;
             index++;
         }
@@ -123,6 +126,6 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-// ll.find(500)
+ll.find(400)
 // ll.contains(700);
-ll.toString();
+// ll.toString();
