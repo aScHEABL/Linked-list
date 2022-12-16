@@ -91,6 +91,20 @@ class LinkedList {
         }
     }
 
+    // 9. Print the index of the node containing value, or null if not found.
+    find(value) {
+        let index = 0;
+        let current = this.Head;
+        while (current) {
+            if (current.data === value) {
+                console.log(index);
+                return;
+            }
+            current = current.next;
+            index++;
+        }
+    }
+
     // Print every node in the list.
     printListData() {
         let current = this.Head;
@@ -109,5 +123,6 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-ll.contains(700);
+ll.find(500)
+// ll.contains(700);
 // ll.printListData();
