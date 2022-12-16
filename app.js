@@ -108,7 +108,7 @@ class LinkedList {
         }
     }
 
-    // Print every node in the list.
+    // 10. Print every node in the list.
     toString() {
         let current = this.Head;
 
@@ -118,6 +118,24 @@ class LinkedList {
         }
         console.log("Null");
     }
+
+    // 11. Inserts a new node with the provided value at the given index.
+    insertAt(data, index) {
+        let count = 0;
+        let node = new Node(data);
+        let current = this.Head;
+        if (index < 0 || index > this.size - 1) {
+            console.log("Provided index is out of range.");
+            return;
+        } else if (index === 0) {
+            current = new Node(data, current);
+            return;
+        } else if (index > 0 && index < this.size - 1) {
+            
+        }
+    }
+
+    // 12. Removes the node at the given index.
 }
 
 
@@ -129,4 +147,5 @@ ll.prepend(500);
 
 // ll.find(400)
 // ll.contains(700);
-ll.toString();
+// ll.toString();
+// ll.insertAt()
