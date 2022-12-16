@@ -75,6 +75,22 @@ class LinkedList {
         this.size--;
     }
 
+    // 8. Print true if the passed in value is in the list and otherwise returns false.
+    contains(value) {
+        let current = this.Head;
+        while (current) {
+            if (current.data === value) {   // If the current node.data === value, print true then break;
+                console.log("True")
+                return;
+            } else {                        // If the current node !== value, 
+                if (!current.next) {        // loop through the list and if hit !current.next then break.
+                    console.log("False");
+                }
+            }
+            current = current.next
+        }
+    }
+
     // Print every node in the list.
     printListData() {
         let current = this.Head;
@@ -93,5 +109,5 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-ll.pop();
-ll.printListData();
+ll.contains(700);
+// ll.printListData();
