@@ -106,7 +106,7 @@ class LinkedList {
     }
 
     // Print every node in the list.
-    printListData() {
+    toString() {
         let current = this.Head;
 
         while (current) {
@@ -123,6 +123,6 @@ ll.append(200);
 ll.append(400);
 ll.prepend(500);
 
-ll.find(500)
+// ll.find(500)
 // ll.contains(700);
-// ll.printListData();
+ll.toString();
